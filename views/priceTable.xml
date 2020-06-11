@@ -1,0 +1,61 @@
+<odoo>
+
+    <!-- Add a custom form view -->
+    <record id="personal_price_view_form" model="ir.ui.view">
+        <field name="name">Price Form</field>
+        <field name="model">personal.price</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="date_from"/>
+                            <field name="date_to"/>
+                            <!--<field name="currency_id"/>-->
+                        </group>
+                        <group>
+                            <field name="dimensional_stamp"/>
+                            <field name="issuing_fees"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Price" >
+                            <field name="price_lines">
+                                <tree editable="bottom">
+                                    <field name="cat"/>
+                                    <field name="cover"/>
+                                    <field name="rate"/>
+
+                                </tree>
+                            </field>
+                        </page>
+
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Add a custom Tree (List) view -->
+    <record id="personal_price_view_tree" model="ir.ui.view">
+        <field name="name">Price List</field>
+        <field name="model">personal.price</field>
+        <field name="arch" type="xml">
+            <tree>
+
+                <field name="date_from"/>
+                <field name="date_to"/>
+                <!--<field name="issue_fees"/>-->
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="p_price_action">
+        <field name="name">Price Table</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">personal.price</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_id" ref="personal_price_view_tree"/>
+        <field name="view_mode">form,tree</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,46 @@
+<odoo>
+    <data>
+        <!--<menuitem id="travel_menu" name="Smart Travel"-->
+                  <!--groups="smart_travel_agency.branch_group,smart_travel_agency.agency_group,smart_travel_agency.all_agencies_group"-->
+                  <!--web_icon="smart_travel_agency,static/description/icon.png"/>-->
+        <menuitem id="personal_menu" name="Personal Acciedent"
+                  web_icon="personal_acciedent,static/description/personal.jpeg"/>
+         <menuitem id="personal_policy_view" name="Personal Policy"
+                parent="personal_menu"  />
+        <menuitem id="personal_policy_view" name="Personal Policy"
+                parent="personal_menu"  action="personal_policy_action"/>
+        <!--<menuitem id="travel_policy_view_menu" name="Travel Policy" parent="travel_policy_view"-->
+                  <!--action="travel_policy_action" sequence="0"/>-->
+        <!--<menuitem id="insured_traveler_view_menu" name="Insured Travelers" parent="travel_policy_view"-->
+                  <!--action="insured_traveler_action" sequence="1"/>-->
+        <!--<menuitem id="insured_trips_view_menu" name="Insured Trips" parent="travel_policy_view"-->
+                  <!--action="insured_trips_action" sequence="2"/>-->
+        <!--<menuitem id="billing_view_menu" name="Billing" parent="travel_policy_view"-->
+                  <!--action="billing_action" sequence="2"/>-->
+
+
+        <menuitem id="configuration_menu" name="Configuration"
+                  parent="personal_menu" />
+
+
+
+        <menuitem id="p_price_menu" name="Price Table" parent="configuration_menu"
+                  action="p_price_action" sequence="0"/>
+              <menuitem id="cover_menu" name="Covers" parent="configuration_menu"
+                  action="cover_action" sequence="3"/>
+
+
+        <menuitem id="cat_menu" name="Category" parent="configuration_menu"
+                  action="cat_action" sequence="1"/>
+        <menuitem id="job_menu" name="Jobs" parent="configuration_menu"
+                  action="job_action" sequence="2"/>
+        <!--<menuitem id="certificate_booklet_view_menu" name="Certificate Booklet" parent="configuration_view_menu2"-->
+                  <!--action="certificate_booklet_action" sequence="6"/>-->
+        <!--<menuitem id="available_serial_view_menu" name="Available Serial Numbers" parent="configuration_view_menu2"-->
+                  <!--action="serial_action" sequence="7"/>-->
+        <!--<menuitem id="travel_commission_view_menu" name="Travel Commission" parent="configuration_view_menu2"-->
+                  <!--action="travel_commission_action" sequence="8"/>-->
+        <!--<menuitem id="rating_table_view_menu" name="Rating/Charges Table" parent="configuration_view_menu2"-->
+                  <!--action="rating_table_action" sequence="8"/>-->
+    </data>
+</odoo>

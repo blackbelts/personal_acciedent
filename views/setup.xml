@@ -1,0 +1,225 @@
+<odoo>
+
+    <record model="ir.ui.view" id="jobs_tree">
+        <field name="name">jobtable</field>
+        <field name="model">job.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Jobs">
+                <field name="job_id"/>
+                <field name="category_id"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="form_jobs">
+        <field name="name">form.job.table</field>
+        <field name="model">job.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Travel Agency">
+                <sheet>
+                    <group>
+                        <field name="job_id"/>
+                        <field name="ar_job_id"/>
+                        <field name="category_id"/>
+                    </group>
+                    <notebook>
+                     <page string="Additional Conditions">
+
+                            <field name="condition_ids">
+                                <tree editable="1">
+                                    <field name="condition"/>
+                                    <field name="ar_condition"/>
+                                </tree>
+                            </field>
+                     </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="job_action">
+        <field name="name">Jobs</field>
+        <field name="res_model">job.table</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Your Travel Agency
+            </p>
+        </field>
+    </record>
+      <record model="ir.ui.view" id="covers_tree">
+        <field name="name">coverstable</field>
+        <field name="model">cover.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Jobs">
+                <field name="cover_id"/>
+                <field name="basic"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="form_covers">
+        <field name="name">cover.job.table</field>
+        <field name="model">cover.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Travel Agency">
+                <sheet>
+                    <group>
+                        <field name="cover_id"/>
+                        <field name="desc"/>
+                    </group>
+                    <group>
+                        <field name="ar_cover_id"/>
+                        <field name="ar_desc"/>
+                    </group>
+                    <group>
+                        <field name="basic"/>
+                    </group>
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="cover_action">
+        <field name="name">Covers</field>
+        <field name="res_model">cover.table</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Your Covers
+            </p>
+        </field>
+    </record>
+
+
+
+    <record model="ir.ui.view" id="cat_tree">
+        <field name="name">cat</field>
+        <field name="model">cat.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Cat">
+                <field name="cat_id"/>
+
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="cat_form">
+        <field name="name">Category</field>
+        <field name="model">cat.table</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Category">
+                <sheet>
+                    <group>
+                    <group>
+                        <field name="cat_id"/>
+                    </group>
+                    <group>
+                        <field name="job_ids" widget="many2many_tags"/>
+                    </group>
+
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="cat_action">
+        <field name="name">cat</field>
+        <field name="res_model">cat.table</field>
+<!--        <field name="view_type">form</field>-->
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Your Booklet
+            </p>
+        </field>
+    </record>
+
+    <!--&lt;!&ndash;     Inherit Form View to Modify it &ndash;&gt;-->
+    <!--<record id="new_user_form_view" model="ir.ui.view">-->
+        <!--<field name="name">form.res.users</field>-->
+        <!--<field name="model">res.users</field>-->
+        <!--<field name="priority" eval="16"/>-->
+        <!--<field name="inherit_id" ref="base.view_users_form"/>-->
+        <!--<field name="arch" type="xml">-->
+
+                <!--<xpath expr="//field[@name='login']" position="after">-->
+                        <!--<div style="width:50%%;">-->
+                            <!--<label for="travel_agency"/>-->
+                            <!--<field name="travel_agency"/>-->
+                        <!--</div>-->
+                        <!--<div style="width:50%%;">-->
+                            <!--<label for="travel_agency_branch"/>-->
+                            <!--<field name="travel_agency_branch"/>-->
+                        <!--</div>-->
+
+                        <!--<div>-->
+                            <!--<label for="address"/>-->
+                            <!--<field name="address"/>-->
+                        <!--</div>-->
+
+                        <!--<div style="width:70% !important;">-->
+                            <!--<label for="phone"/>-->
+                            <!--<field name="phone"/>-->
+                            <!--<label for="mobile"/>-->
+                            <!--<field name="mobile"/>-->
+                        <!--</div>-->
+
+
+                <!--</xpath>-->
+<!--&lt;!&ndash;            <xpath expr="//sheet/notebook" position="attrs">&ndash;&gt;-->
+<!--&lt;!&ndash;                <attribute name="attrs">{'invisible': [('user_id','!=',True)]}</attribute>>&ndash;&gt;-->
+
+
+<!--&lt;!&ndash;            </xpath>&ndash;&gt;-->
+        <!--</field>-->
+    <!--</record>-->
+
+    <!--<record model="ir.ui.view" id="tree_travel_commission">-->
+        <!--<field name="name">tree.travel.commission</field>-->
+        <!--<field name="model">travel.commission</field>-->
+        <!--<field name="priority" eval="16"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<tree string="Travel Commission">-->
+                <!--<field name="travel_agency"/>-->
+                <!--<field name="valid_from"/>-->
+                <!--<field name="valid_to"/>-->
+                <!--<field name="commission"/>-->
+            <!--</tree>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!--<record model="ir.ui.view" id="form_travel_commission">-->
+        <!--<field name="name">form.travel.commission</field>-->
+        <!--<field name="model">travel.commission</field>-->
+        <!--<field name="priority" eval="16"/>-->
+        <!--<field name="arch" type="xml">-->
+            <!--<form string="Travel Commission">-->
+                <!--<sheet>-->
+                    <!--<group>-->
+                        <!--<field name="travel_agency"/>-->
+                        <!--<field name="valid_from"/>-->
+                        <!--<field name="valid_to"/>-->
+                        <!--<field name="commission"/>-->
+                    <!--</group>-->
+                <!--</sheet>-->
+            <!--</form>-->
+        <!--</field>-->
+    <!--</record>-->
+    <!--<record model="ir.actions.act_window" id="travel_commission_action">-->
+        <!--<field name="name">Travel Commission</field>-->
+        <!--<field name="res_model">travel.commission</field>-->
+        <!--<field name="view_type">form</field>-->
+        <!--<field name="view_mode">tree,form</field>-->
+        <!--<field name="help" type="html">-->
+            <!--<p class="oe_view_nocontent_create">Your Travel Commission-->
+            <!--</p>-->
+        <!--</field>-->
+    <!--</record>-->
+
+
+</odoo>
