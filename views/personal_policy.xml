@@ -35,7 +35,7 @@
     <record id="seq_travel" model="ir.sequence">
         <field name="name">Policy</field>
         <field name="code">policy</field>
-        <field name="prefix">POL/</field>
+        <field name="prefix">PA/</field>
         <field name="padding">4</field>
         <!--<field name="company_id" eval="False"/>-->
     </record>
@@ -79,23 +79,23 @@
                     </group>
                     <group>
                         <group>
-                            <field name="customer" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="customer" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
                             <field name="country_id"  attrs="{'readonly': [('state', '=','approved')]}"/>
                             <field name="city" attrs="{'readonly': [('state', '=','approved')]}"/>
-                            <field name="address" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="address" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
 <!--                            <field name="passport_num" attrs="{'readonly': [('state', '=','approved')]}"/>-->
-                            <field name="job" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="job" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
 
-                            <field name="covers" widget="many2many_tags"/>
+                            <field name="covers" widget="many2many_tags" required="1"/>
 
-                            <field name="national_id" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="national_id" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
                         </group>
                         <group>
-                            <field name="DOB" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="DOB" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
                             <field name="age"/>
                             <field name="eligible"/>
-                            <field name="gender" attrs="{'readonly': [('state', '=','approved')]}"/>
-                            <field name="expiry_date" attrs="{'readonly': [('state', '=','approved')]}"/>
+                            <field name="gender" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
+                            <field name="expiry_date" attrs="{'readonly': [('state', '=','approved')]}" required="1"/>
                             <field name="years" attrs="{'readonly': [('state', '=','approved')]}"/>
                         </group>
                     </group>

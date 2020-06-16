@@ -4,9 +4,12 @@
                   <!--groups="smart_travel_agency.branch_group,smart_travel_agency.agency_group,smart_travel_agency.all_agencies_group"-->
                   <!--web_icon="smart_travel_agency,static/description/icon.png"/>-->
         <menuitem id="personal_menu" name="Personal Acciedent"
-                  web_icon="personal_acciedent,static/description/personal.jpeg"/>
+                  web_icon="personal_acciedent,static/description/personal.jpeg"
+                  groups="personal_acciedent.all_document_group,personal_acciedent.manager_group"
+        />
          <menuitem id="personal_policy_view" name="Personal Policy"
-                parent="personal_menu"  />
+                parent="personal_menu" groups="personal_acciedent.all_document_group,personal_acciedent.manager_group"
+/>
         <menuitem id="personal_policy_view" name="Personal Policy"
                 parent="personal_menu"  action="personal_policy_action"/>
         <!--<menuitem id="travel_policy_view_menu" name="Travel Policy" parent="travel_policy_view"-->
@@ -20,7 +23,8 @@
 
 
         <menuitem id="configuration_menu" name="Configuration"
-                  parent="personal_menu" />
+                  parent="personal_menu" groups="personal_acciedent.manager_group"
+/>
 
 
 
