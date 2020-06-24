@@ -24,7 +24,7 @@ class TravelPolicy(models.Model):
         # self.env['mail.template'].browse(template_id.id).send_mail(self.id)
 
     policy_num = fields.Char(string='Policy Number', required=True, copy=False, index=True,
-                             default=lambda self: self.env['ir.sequence'].next_by_code('policy'), readonly=True)
+                             default=lambda self: self.env['ir.sequence'].next_by_code('pa'), readonly=True)
     state = fields.Selection([('pending', 'Pending'),
                               ('approved', 'Approved'),
                               ('canceled', 'Canceled'), ],

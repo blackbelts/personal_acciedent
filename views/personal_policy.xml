@@ -34,7 +34,7 @@
     </record>
     <record id="seq_travel" model="ir.sequence">
         <field name="name">Policy</field>
-        <field name="code">policy</field>
+        <field name="code">pa</field>
         <field name="prefix">PA/</field>
         <field name="padding">4</field>
         <!--<field name="company_id" eval="False"/>-->
