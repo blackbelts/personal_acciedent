@@ -22,7 +22,11 @@ class Travelapi(models.Model):
         self.env['policy.personal'].search([('id', '=', policy_id.id)]).send_mail_template(data.get('mail'))
         return [policy_id.id,policy_id.policy_num]
 
+    @api.model
+    def create_personal_ticket(self, data):
+        name = 'Persoanl Ticket'
+        ticket_id = self.env['helpdesk_lite.ticket'].create(
+            {'name': name, 'contact_name': data.get('name'), 'job': data.get('job'), 'phone': data.get('phone'),
+             'email_from': data.get('mail'),'sum_insured': data.get('sum_insured'), 'ticket_type': 'personal'})
 
-
-
-
+        return ticket_id.id
