@@ -25,7 +25,7 @@ class Travelapi(models.Model):
     @api.model
     def create_personal_ticket(self, data):
         name = 'Persoanl Ticket'
-        ticket_id = self.env['helpdesk_lite.ticket'].create(
+        ticket_id = self.env['quoate'].create(
             {'name': name, 'contact_name': data.get('name'), 'job': data.get('job'), 'phone': data.get('phone'),
              'email_from': data.get('mail'),'sum_insured': data.get('sum_insured'), 'ticket_type': 'personal'})
 
