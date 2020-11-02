@@ -84,6 +84,7 @@
                                     <div  style="width: 100% !important; padding-left:10px; margin-top:15px !important;">
                                         <span><t t-esc="o.policy_num"/></span>
                                         <span style="padding-left:5px; color: #073e89;">: رقم الوثيقة</span>
+
                                     </div>
                                     <div  style="width: 100% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="padding-left:5px; color: #073e89;">اسم المتعاقد / المؤمن عليه :</span>
@@ -125,6 +126,7 @@
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مدة التأمين : </span>
                                         <span><t t-esc="o.years*12"/> شهرا </span>
+
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
@@ -136,6 +138,7 @@
                                     </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
                                         <p style="font-size: 13px;">تم إصدار هذه الوثيقة بناء علي طلب المتعاقد/المؤمن عليه</p>
+
                                         <p style="font-size: 13px; margin-top:-10px !important;">بعد سداد قسط التأمين الوارد في هذه الوثيقة ، فان شركة أروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تضمن دفع التعويضات الخاصة بالشخص المؤمن عليه أو المستفيد طبقا للشروط والاستثناءات المرفقة وفقا لمبالغ التأمين المذكوره ادناه</p>
                                     </div>
                                     <div  style="width: 100% !important; float:right !important; margin-top:10px !important;">
@@ -143,6 +146,7 @@
                                             <tr>
                                                 <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
                                                 <td style="border: none !important; justify-content: left !important; text-align: left !important; float: left !important;"><span> جم </span><t t-esc="o.total"/></td>
+
                                             </tr>
                                         </table>
                                     </div>
@@ -181,6 +185,7 @@
                                                     <th style="border: none !important;" scope="col">مبلغ التأمين / جم للفرد</th>
                                                     <th style="border: none !important;" scope="col">التغطية التأمينية</th>
 
+
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -206,6 +211,7 @@
                                                     <td style="border: none !important;">  </td>
                                                     <td style="border: none !important;">2.00</td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
+
 
                                                 </tr>
                                             </tbody>
@@ -324,37 +330,42 @@
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
                                 <div style="margin-top:10px !important;text-align:start; padding-top:20px !important ">
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى من هذا التأمين الخسائر أو الأضرار التى نشأت أو تأثرت أو لها علاقة أو تسبب بصفة مباشرة أو غير مباشرة عن قرب أو بعد سواء من حيث مصدرها أو من حيث مداها عن حرب أو غزو أو أى عمل من عدو أجنبى أو عدوان أو عمليات حرب ( سواء أعلنت الحرب أم لا ) وتمرد أو عصيان أو الإعتصام أو المصادرة أو الأعمال العدائية أو فتنة و ثورة أو تآمر أو قوة عسكرية أو سلطة غاصبة .
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يسثنى كافه الانشطه و التدريبات الخطره و الاعمال تحت الارض و النفقيه  و الاعمال المائيه و البتروليه .
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يسثنى اي امراض و الاوبئه .
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يجب على المؤمن عليهم أخذ كافه وسائل الحمايه اللازمه و احتياطيات السلامه المهنية و الفنية  عند ممارستهم لنشاطاتهم و اعمالهم .
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن  ممارسة أى العاب رياضية سواء كمحترف او على سبيل الهواية.
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن  ممارسة الانشطة و الاعمال العسكرية الفعلية و /او التجنيد الالزامى.
+                                    <t t-foreach='o.get_exceptions()' t-as="ex">
+                                        <p style="margin-top:5px; text-align:start;">
+                                            <t t-esc="ex.exception"/>
+                                        </p>
+                                    </t>
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى من هذا التأمين الخسائر أو الأضرار التى نشأت أو تأثرت أو لها علاقة أو تسبب بصفة مباشرة أو غير مباشرة عن قرب أو بعد سواء من حيث مصدرها أو من حيث مداها عن حرب أو غزو أو أى عمل من عدو أجنبى أو عدوان أو عمليات حرب ( سواء أعلنت الحرب أم لا ) وتمرد أو عصيان أو الإعتصام أو المصادرة أو الأعمال العدائية أو فتنة و ثورة أو تآمر أو قوة عسكرية أو سلطة غاصبة .-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يسثنى كافه الانشطه و التدريبات الخطره و الاعمال تحت الارض و النفقيه  و الاعمال المائيه و البتروليه .-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يسثنى اي امراض و الاوبئه .-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يجب على المؤمن عليهم أخذ كافه وسائل الحمايه اللازمه و احتياطيات السلامه المهنية و الفنية  عند ممارستهم لنشاطاتهم و اعمالهم .-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن  ممارسة أى العاب رياضية سواء كمحترف او على سبيل الهواية.-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن  ممارسة الانشطة و الاعمال العسكرية الفعلية و /او التجنيد الالزامى.-->
 
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن اي أعمال يقوم بها المؤمن عليهم بعيد عن اليابسة أو تحت الماء او تحت الأرض  او في الأنفاق.
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن أستخدام المتفجرات أو البارود او اي مواد متفجره او سريعة الأشتعال.
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن الحروب و الشغب و الإضرابات العماليه و الإضطربات الأهليه و الإرهاب.
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - يستثنى الأوبئة و الأمراض من أي نوع كانت وكذلك الناشئة عن ضربة شمس أو التجمد من الصقيع أو كل ما يحدث نتيجة تغيرات الطقس .
-                                    </p>
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن اي أعمال يقوم بها المؤمن عليهم بعيد عن اليابسة أو تحت الماء او تحت الأرض  او في الأنفاق.-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن أستخدام المتفجرات أو البارود او اي مواد متفجره او سريعة الأشتعال.-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى اي ضرر مباشر أو غير مباشر ناتج عن الحروب و الشغب و الإضرابات العماليه و الإضطربات الأهليه و الإرهاب.-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - يستثنى الأوبئة و الأمراض من أي نوع كانت وكذلك الناشئة عن ضربة شمس أو التجمد من الصقيع أو كل ما يحدث نتيجة تغيرات الطقس .-->
+<!--                                    </p>-->
                                     <t t-foreach='o.get_additional_conditions()' t-as="ad">
                                         <p style="margin-top:5px; text-align:start;">
                                             <t t-esc="ad.ar_condition"/>
@@ -382,6 +393,7 @@
                                         تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة
                                     </p>
                                 </div>
+
                             </div>
                         </t>
                         <t  t-if="o.policy_lang == 'ar'">

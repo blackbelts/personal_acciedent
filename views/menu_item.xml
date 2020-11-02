@@ -31,6 +31,8 @@
                   action="cat_action" sequence="1"/>
         <menuitem id="job_menu" name="Jobs" parent="configuration_menu"
                   action="job_action" sequence="2"/>
+        <menuitem id="exceptions_menu" name="Exceptions" parent="configuration_menu"
+                  action="personal_exceptions_action" sequence="3"/>
         <!--<menuitem id="certificate_booklet_view_menu" name="Certificate Booklet" parent="configuration_view_menu2"-->
                   <!--action="certificate_booklet_action" sequence="6"/>-->
         <!--<menuitem id="available_serial_view_menu" name="Available Serial Numbers" parent="configuration_view_menu2"-->
