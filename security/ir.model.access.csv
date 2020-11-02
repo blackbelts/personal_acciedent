@@ -9,7 +9,7 @@ access_policy7_p,policy.policy_p7,model_policy_personal,base.group_user,1,1,1,1
 access_policy8_p,policy.policy_p8,model_personal_front,base.group_user,1,1,1,1
 access_policy9_p,policy.policy_p9,model_eligible_table,base.group_user,1,1,1,1
 access_policy10_p,policy.policy_p10,model_additional_conditions_table,base.group_user,1,1,1,1
-access_policy11_p,policy.policy_p11,model_personal_exceptions_table,base.group_user,1,1,1,1
+access_policy11_p,policy.policy_p11,model_personal_exceptions,base.group_user,1,1,1,1
 
 
 
