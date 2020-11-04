@@ -143,6 +143,43 @@
         </field>
     </record>
 
+    <!-- Add a custom form view -->
+    <record model="ir.ui.view" id="tree_personal_exceptions">
+        <field name="name">Exceptions</field>
+        <field name="model">personal.exceptions</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <tree string="Exceptions" editable="bottom">
+                <field name="exception"/>
+                <field name="en_exception"/>
+            </tree>
+        </field>
+    </record>
+    <record model="ir.ui.view" id="form_personal_exceptions">
+        <field name="name">Exceptions</field>
+        <field name="model">personal.exceptions</field>
+        <field name="priority" eval="16"/>
+        <field name="arch" type="xml">
+            <form string="Idea form">
+                <sheet>
+                    <group>
+                        <field name="exception"/>
+                        <field name="en_exception"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="personal_exceptions_action">
+        <field name="name">Exceptions</field>
+        <field name="res_model">personal.exceptions</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Exceptions
+            </p>
+        </field>
+    </record>
+
     <!--<record id="cancel_view" model="ir.ui.view">-->
     <!--<field name="name">Cancel Policy</field>-->
     <!--<field name="model">cancel.policy</field>-->

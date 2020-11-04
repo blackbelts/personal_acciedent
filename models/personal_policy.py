@@ -131,6 +131,11 @@ class TravelPolicy(models.Model):
         job = self.env['job.table'].search([('id', '=', self.job.id)])
         return job.condition_ids
 
+    @api.model
+    def get_exceptions(self):
+        exceptions = self.env['personal.exceptions'].search([])
+        return exceptions
+
 
     # @api.one
     @api.depends('issue_date')
@@ -278,3 +283,9 @@ class FamilyAge(models.Model):
     mem_perc=fields.Char('Percentage')
     relationship = fields.Char('Relationship')
     policy_id=fields.Many2one('policy.personal',ondelete='cascade')
+    
+class Exceptions(models.Model):
+    _name = 'personal.exceptions'
+
+    exception = fields.Text('Exception')
+    en_exception = fields.Text('En Exception')
