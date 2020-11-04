@@ -20,7 +20,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','mail','helpdesk_inherit','arope-conf'],
+    'depends': ['base','mail','helpdesk_inherit',],
 
     # always loaded
     'data': [
@@ -38,7 +38,7 @@
         # 'views/benefits.xml',
         # 'views/excess.xml',
         'views/priceTable.xml',
-        'views/menu_item.xml',
+        # 'views/menu_item.xml',
 
     ],
     # only loaded in demonstration mode

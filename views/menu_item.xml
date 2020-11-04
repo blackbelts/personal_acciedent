@@ -16,7 +16,7 @@
 
 
         <menuitem id="configuration_menu" name="PA"
-                  parent="arope-conf.conf_menu" groups="personal_acciedent.manager_group"
+                  parent="arope_conf.conf_menu" groups="personal_acciedent.manager_group"
 />
 
 
