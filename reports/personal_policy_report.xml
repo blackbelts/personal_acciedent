@@ -209,7 +209,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="border: none !important;">  </td>
-                                                    <td style="border: none !important;"><t t-esc="o.total*(15/100)"/></td>
+                                                    <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(15/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
 
