@@ -80,7 +80,7 @@
                         <t t-if="o.policy_lang == 'ar'">
                             <div class="page" style="unicode-bidi: bidi-override !important; direction: unset !important;text-align:right !important;">                            
 
-                                <div  style="padding-left: 25px !important; padding-right: 25px !important; padding-top:3px; margin-top: -10px !important;">
+                                <div  style="padding-left: 25px !important; padding-right: 25px !important; padding-top:3px; margin-top: 3px !important;">
                                     <div  style="width: 100% !important; padding-left:10px; margin-top:10px !important;">
                                         <span><t t-esc="o.policy_num"/></span>
                                         <span style="padding-left:5px; color: #073e89;">: رقم الوثيقة</span>
@@ -329,7 +329,7 @@
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
-                                <div style="margin-top:3px !important;text-align:start; padding-top:5px !important margin-top: -10px !important;">
+                                <div style="margin-top:3px !important;text-align:start; padding-top:5px !important margin-top: 4px !important;">
                                     <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>
                                     <t t-foreach='o.get_exceptions()' t-as="ex">
                                         <p style="margin-top:5px; text-align:start;">
