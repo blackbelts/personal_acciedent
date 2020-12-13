@@ -15,7 +15,7 @@
                         <style>
                             @font-face {
                                 font-family: 'calibril';
-                                src: url('/personal_acciedent/static/fonts/calibril.ttf');
+                                src: url('https://online.aropeegypt.com.eg:8069/personal_acciedent/static/fonts/calibril.ttf');
                              }
                             body {
                                 font-size:15px !important;
@@ -55,8 +55,8 @@
 
                         </style>
                         <t t-if="o.policy_lang == 'ar'">
-                            <div class="header" style="height: 100px !important;;">
-                                <img class="img"  style="width: 100%;" src="/smart_travel_agency/static/img/3.jpg"/>
+                            <div class="header" style="height: 100px !important;">
+                                <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/3.png"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89;">وثيقة الحوادث الشخصية</h5>
                                     <h5 style="color: #073e89;"><t t-esc="o.policy_num"/></h5>
@@ -68,7 +68,7 @@
                         </t>
                         <t t-if="o.policy_lang == 'en'">
                             <div class="header" style="height: 100px !important;;">
-                                <img class="img"  style="width: 100%;" src="/smart_travel_agency/static/img/3.jpg"/>
+                                <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/3.png"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89;">Personal Accident Insurance</h5>
                                     <h5 style="color: #073e89;"><t t-esc="o.policy_num"/></h5>
@@ -100,7 +100,7 @@
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ الميلاد : </span>
-                                        <span><t t-esc="o.DOB"/></span>
+                                        <span><t t-esc="o.DOB.strftime('%Y/%d/%m')"/></span>
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">الجنسية : </span>
@@ -130,11 +130,11 @@
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
-                                        <span><t t-esc="o.issue_date.strftime('%d/%m/%Y')"  /></span>
+                                        <span><t t-esc="o.issue_date.strftime('%Y/%d/%m')"  /></span>
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
-                                        <span><t t-esc="o.expiry_date.strftime('%d/%m/%Y')"  /></span>
+                                        <span><t t-esc="o.expiry_date.strftime('%Y/%d/%m')"  /></span>
                                     </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
                                         <p style="font-size: 13px;">تم إصدار هذه الوثيقة بناء علي طلب المتعاقد/المؤمن عليه</p>
@@ -150,8 +150,8 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div style="width: 100% !important; float:right !important;">
-                                        <p style="font-size: 13px; margin-top:-10px !important;">رسم الإشراف والرقابة + واحد فى الألف اعتماد وثيقة + اثنين في الألف مقابل صندوق حملة الوثائق</p>
+                                    <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
+<!--                                        <p style="font-size: 13px; margin-top:-10px !important;">رسم الإشراف والرقابة + واحد فى الألف اعتماد وثيقة + اثنين في الألف مقابل صندوق حملة الوثائق</p>-->
                                         <p style="font-size: 13px; margin-top:-10px !important;"><span style="border-bottom: 1px solid;">المستفيد (ين): </span> المستفيد في حالة الوفاة الناجمة عن حادث : <t t-if="o.eligible !=False" ><span>الورثة الشرعيون</span></t> </p>
                                     </div>
                                     <t t-if="o.eligible ==False" >
@@ -209,7 +209,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="border: none !important;">  </td>
-                                                    <td style="border: none !important;">2.00</td>
+                                                    <td style="border: none !important;"><t t-esc="o.total*(15/100)"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
 
@@ -224,7 +224,7 @@
 
                                     </div>
                                     <div style="width: 50% !important; float:left !important;">
-                                        <img style="width:60%;" class="img img-responsive" src="/personal_acciedent/static/img/1.png"/>
+                                        <img style="width:60%;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/1.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -399,13 +399,13 @@
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="footer" style="float:left; width:100px;">
                                 <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">اروب لتأمينات الممتلكات والمسئوليات مصر - ش.م.م</span>
-                                <img style="width:100% !important;" class="img img-responsive" src="/smart_travel_agency/static/img/1.png"/>
+                                <img style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/img/1.png"/>
                             </div>
                         </t>
                         <t  t-if="o.policy_lang == 'en'">
                             <div class="footer" style="float:left; width:100px;">
                                 <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">AROPE PROPERTIES &amp; LIABILITIES INSURANCE EGYPT - S.A.E</span>
-                                <img style="width:100% !important;" class="img img-responsive" src="/smart_travel_agency/static/img/1.png"/>
+                                <img style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/img/1.png"/>
                             </div>
                         </t>
 
