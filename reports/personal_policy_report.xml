@@ -55,7 +55,7 @@
 
                         </style>
                         <t t-if="o.policy_lang == 'ar'">
-                            <div class="header" style="height: 100px !important;">
+                            <div class="header" style="float:left; width:100%;">
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/3.jpg"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89; text-align:center;">وثيقة الحوادث الشخصية</h5>
@@ -67,7 +67,7 @@
                             </div>
                         </t>
                         <t t-if="o.policy_lang == 'en'">
-                            <div class="header" style="height: 100px !important;;">
+                            <div class="header" style="float:left; width:100%;">
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/3.jpg"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89; text-align:center;">Personal Accident Insurance</h5>
