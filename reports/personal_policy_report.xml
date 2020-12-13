@@ -58,9 +58,9 @@
                             <div class="header" style="height: 100px !important;">
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/3.png"/>
                                 <div class="text-center">
-                                    <h5 style="color: #073e89;">وثيقة الحوادث الشخصية</h5>
-                                    <h5 style="color: #073e89;"><t t-esc="o.policy_num"/></h5>
-                                    <h5 style="color: #073e89;">جدول المواصفات والمزاية الخاصة</h5>
+                                    <h5 style="color: #073e89; text-align:center;">وثيقة الحوادث الشخصية</h5>
+                                    <h5 style="color: #073e89; text-align:center;"><t t-esc="o.policy_num"/></h5>
+
                                 </div>
                                 <div style="border-bottom: 1px solid;">
                                 </div>
@@ -70,9 +70,9 @@
                             <div class="header" style="height: 100px !important;;">
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/3.png"/>
                                 <div class="text-center">
-                                    <h5 style="color: #073e89;">Personal Accident Insurance</h5>
-                                    <h5 style="color: #073e89;"><t t-esc="o.policy_num"/></h5>
-                                    <h5 style="color: #073e89;">Policy Schedule</h5>
+                                    <h5 style="color: #073e89; text-align:center;">Personal Accident Insurance</h5>
+                                    <h5 style="color: #073e89; text-align:center;"><t t-esc="o.policy_num"/></h5>
+                                    <h5 style="color: #073e89; text-align:center;">Policy Schedule</h5>
                                 </div>
 
                             </div>
@@ -330,6 +330,7 @@
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
                                 <div style="margin-top:10px !important;text-align:start; padding-top:20px !important ">
+                                    <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>
                                     <t t-foreach='o.get_exceptions()' t-as="ex">
                                         <p style="margin-top:5px; text-align:start;">
                                             <t t-esc="ex.exception"/>
@@ -398,14 +399,15 @@
                         </t>
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="footer" style="float:left; width:100px;">
+                                <img  style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/1.png"/>
                                 <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">اروب لتأمينات الممتلكات والمسئوليات مصر - ش.م.م</span>
-                                <img style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/img/1.png"/>
+
                             </div>
                         </t>
                         <t  t-if="o.policy_lang == 'en'">
                             <div class="footer" style="float:left; width:100px;">
+                                <img  style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/1.png"/>
                                 <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">AROPE PROPERTIES &amp; LIABILITIES INSURANCE EGYPT - S.A.E</span>
-                                <img style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/img/1.png"/>
                             </div>
                         </t>
 
