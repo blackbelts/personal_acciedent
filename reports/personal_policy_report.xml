@@ -100,7 +100,7 @@
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ الميلاد : </span>
-                                        <span><t t-esc="o.DOB.strftime('%Y/%d/%m')"/></span>
+                                        <span><t t-esc="o.DOB.strftime('%Y/%m/%d')"/></span>
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">الجنسية : </span>
@@ -130,11 +130,11 @@
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
-                                        <span><t t-esc="o.issue_date.strftime('%Y/%d/%m')"  /></span>
+                                        <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
                                     <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
-                                        <span><t t-esc="o.expiry_date.strftime('%Y/%d/%m')"  /></span>
+                                        <span><t t-esc="o.expiry_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
                                         <p style="font-size: 13px;">تم إصدار هذه الوثيقة بناء علي طلب المتعاقد/المؤمن عليه</p>
