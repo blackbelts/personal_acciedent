@@ -52,9 +52,9 @@
                             class="oe_highlight"
                             attrs="{'invisible': ['|',('state', '=', 'approved'),('state', '=', 'canceled')]}"/>
 
-                    <button name="get_finicial_data" string="Compute Price" type="object"
-                            class="oe_highlight"
-                            attrs="{'invisible': ['|',('state', '=', 'approved'),('state', '=', 'canceled')]}"/>
+<!--                    <button name="get_finicial_data" string="Compute Price" type="object"-->
+<!--                            class="oe_highlight"-->
+<!--                            attrs="{'invisible': ['|',('state', '=', 'approved'),('state', '=', 'canceled')]}"/>-->
                                          <button name="send_mail_template" string="send" type="object"
                                                 class="oe_highlight"/>
                 </header>
