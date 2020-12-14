@@ -12,7 +12,11 @@ class Travelapi(models.Model):
         self.create_policy({'package':'family','c_name':'ali','add':'50tyri','pass':'8888888888','dob':'2012-01-01','zone':'zone 1','p_from':'2020-01-01','p_to':'2020-01-06','family':[{'name':'mo','dob':'2010-01-01','type':'kid'}],'mail':'eslam3bady@gmail.com'})
     @api.model
     def create_policy(self,data):
-        policy_id=self.env['policy.personal'].create({'customer':data.get('c_name'),'national_id':data.get('id'),'job':data.get('job'),'address':data.get('address'),'country_id':data.get('national'),'city':data.get('city'),'covers':[(6,0,data.get('cover'))],'sum_insured':data.get('sum_insured'),'phone':data.get('phone'),'eligible':data.get('elig_bool'),'policy_lang':data.get('language'),'state':'approved'})
+        policy_id=self.env['policy.personal'].create({'customer':data.get('c_name'),'national_id':data.get('id'),'job':data.get('job'),
+                                                      'DOB': data.get('dob'), 'gender': data.get('gender'),
+                                                      'address':data.get('address'),'country_id':data.get('national'),'city':data.get('city'),
+                                                      'covers':[(6,0,data.get('cover'))],'sum_insured':data.get('sum_insured'),'phone':data.get('phone'),
+                                                      'eligible':data.get('elig_bool'),'policy_lang':data.get('language'),'state':'approved'})
         if data.get('othere'):
             for rec in data.get('othere'):
                 self.env['eligible.table'].create(
