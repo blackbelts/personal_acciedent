@@ -2,7 +2,7 @@
               <record id="email_template_pa" model="mail.template">
             <field name="name">Example e-mail template</field>
             <field name="email_from">${object.user_id.id and object.user_id.login/ or ''}</field>
-            <field name="subject">Opportunity ${object.name}</field>
+            <field name="subject">Arope Personal Insurance</field>
             <!--<field name="email_to">${object.user_id.partner_id.email}</field>-->
             <field name="lang">${object.lang}</field>
             <field name="report_template" ref="personal_acciedent.personal_policy_report"/>
@@ -10,12 +10,30 @@
             <field name="auto_delete" eval="True"/>
             <field name="body_html">
                 <![CDATA[
-Arope Personal Insurance Policy
+ AROPE Personal Insurance
+ <br>
+${object.customer}
+عميلنا العزيز
 <br>
-Dear Customer
+${object.policy_num}
+وثيقة تأمين حوادث شخصية رقم
 <br>
-please Find The Attached Policy Files
+<p>
+شكرا لثقتكم الغالية في برامج التأمين المقدمة من شركة أروب مصر لتأمينات
+الممتلكات و المسئوليات ..
 <br>
+مرفق
+جدول الوثيقة و
+
+رابط الشروط و اﻷحكام
+<br>
+
+مع تحيات
+شركة أروب مصر لتأمينات الممتلكات و المسئوليات
+<br>
+الخط الساخن   19243
+<br>
+https://online.aropeegypt.com.eg/PA_General_Conditions.pdf
 	    ]]>
             </field>
         </record>
