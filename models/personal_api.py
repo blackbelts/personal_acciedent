@@ -33,6 +33,6 @@ class Travelapi(models.Model):
         ticket_id = self.env['quoate'].create(
             {'name': name, 'contact_name': data.get('name'), 'job': data.get('job'), 'phone': data.get('phone'),
              'email_from': data.get('mail'),'sum_insured': data.get('sum_insured'), 'ticket_type': 'personal',
-             'support_team': support_team})
+             'support_team': support_team, 'source': 'online'})
         self.env['quoate'].search([('id', '=', ticket_id.id)]).onchange_support_team()
         return ticket_id.id
