@@ -29,8 +29,10 @@ class Travelapi(models.Model):
     @api.model
     def create_personal_ticket(self, data):
         name = 'Persoanl Ticket'
+        support_team = self.env['helpdesk_lite.team'].search([('team_support_type', '=', 'motor')], limit=1).id
         ticket_id = self.env['quoate'].create(
             {'name': name, 'contact_name': data.get('name'), 'job': data.get('job'), 'phone': data.get('phone'),
-             'email_from': data.get('mail'),'sum_insured': data.get('sum_insured'), 'ticket_type': 'personal'})
+             'email_from': data.get('mail'),'sum_insured': data.get('sum_insured'), 'ticket_type': 'personal',
+             'support_team': support_team})
 
         return ticket_id.id
