@@ -202,7 +202,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> <span>من مبلغ التأمين</span> <span>10%</span></td>
+                                                    <td style="border: none !important;"> <span>من مبلغ التأمين</span> <span>%10</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
@@ -335,13 +335,15 @@
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
-                                <div style="margin-top:20px !important;text-align:start; padding-top:30px !important margin-top: 25px !important;">
+                                <div style="margin-top:20px !important;text-align:start; padding-top:30px !important; margin-top: 25px !important;">
 <!--                                    <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>-->
-                                    <t t-foreach='o.get_exceptions()' t-as="ex">
-                                        <p style="margin-top:5px; text-align:start;">
-                                            <t t-esc="ex.exception"/>
-                                        </p>
-                                    </t>
+                                    <div style="margin-top:20px !important; padding-top:30px !important;">
+                                        <t t-foreach='o.get_exceptions()' t-as="ex">
+                                            <p style="margin-top:5px; text-align:start;">
+                                                <t t-esc="ex.exception"/>
+                                            </p>
+                                        </t>
+                                    </div>
 <!--                                    <p style="margin-top:5px; text-align:start;">-->
 <!--                                        - يستثنى من هذا التأمين الخسائر أو الأضرار التى نشأت أو تأثرت أو لها علاقة أو تسبب بصفة مباشرة أو غير مباشرة عن قرب أو بعد سواء من حيث مصدرها أو من حيث مداها عن حرب أو غزو أو أى عمل من عدو أجنبى أو عدوان أو عمليات حرب ( سواء أعلنت الحرب أم لا ) وتمرد أو عصيان أو الإعتصام أو المصادرة أو الأعمال العدائية أو فتنة و ثورة أو تآمر أو قوة عسكرية أو سلطة غاصبة .-->
 <!--                                    </p>-->
