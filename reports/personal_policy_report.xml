@@ -184,25 +184,25 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                     <td style="border: none !important;"><span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
+                                                     <td style="border: none !important;"><span style="float:left; margin-left: 170px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">الوفاة الناتجة عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"><span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
+                                                    <td style="border: none !important;"><span style="float:left; margin-left: 170px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الكلي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
+                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 170px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الجزئي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">10%</span></td>
+                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 170px !important;">من مبلغ التأمين</span> <span style="float:right;">10%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
@@ -230,7 +230,7 @@
                                         <p style="font-size: 13px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
                                     </div>
                                     <div style="width: 50% !important; float:left !important;">
-                                        <img style="width:60%;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/15.png"/>
+                                        <img style="width:40%;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/15.png"/>
                                     </div>
                                 </div>
                             </div>
