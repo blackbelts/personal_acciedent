@@ -10,6 +10,7 @@ class Travelapi(models.Model):
     # @api.multi
     def create_test(self):
         self.create_policy({'package':'family','c_name':'ali','add':'50tyri','pass':'8888888888','dob':'2012-01-01','zone':'zone 1','p_from':'2020-01-01','p_to':'2020-01-06','family':[{'name':'mo','dob':'2010-01-01','type':'kid'}],'mail':'eslam3bady@gmail.com'})
+
     @api.model
     def create_policy(self,data):
         policy_id=self.env['policy.personal'].create({'customer':data.get('c_name'),'national_id':data.get('id'),'job':data.get('job'),
@@ -36,3 +37,11 @@ class Travelapi(models.Model):
              'support_team': support_team, 'source': 'online'})
         self.env['quoate'].search([('id', '=', ticket_id.id)]).onchange_support_team()
         return ticket_id.id
+
+    @api.model
+    def check_policy(self,data):
+        policy = self.env['policy.personal'].search([('national_id', '=', data.get('id'))])
+        if policy:
+            return True
+        else:
+            return False
