@@ -184,25 +184,25 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                     <td style="border: none !important;">100 من مبلغ التأمين %</td>
+                                                     <td style="border: none !important;"><span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">الوفاة الناتجة عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;">100 من مبلغ التأمين %</td>
+                                                    <td style="border: none !important;"><span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الكلي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الجزئي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 10px !important;">من مبلغ التأمين</span> <span style="float:right;">10%</span></td>
+                                                    <td style="border: none !important;"> <span style="float:left; margin-left: 70px !important;">من مبلغ التأمين</span> <span style="float:right;">10%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
