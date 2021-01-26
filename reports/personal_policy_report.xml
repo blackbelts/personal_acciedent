@@ -59,8 +59,8 @@
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/3.jpg"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89; text-align:center;">وثيقة الحوادث الشخصية</h5>
-                                    <h5 style="color: #073e89; text-align:center;"><t t-esc="o.policy_num"/></h5>
-
+                                    <h5 style="color: #073e89; text-align:center;">رقم <t t-esc="o.policy_num"/></h5>
+                                    <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزايا الخاصة</h5>
                                 </div>
                                 <div style="border-bottom: 1px solid;">
                                 </div>
@@ -94,15 +94,15 @@
                                         <span style="padding-left:5px; color: #073e89;">العنوان :</span>
                                         <span><t t-esc="o.address"/></span>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">إثبات الشخصية : </span>
                                         <span><t t-esc="o.national_id"/></span>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ الميلاد : </span>
                                         <span><t t-esc="o.DOB.strftime('%Y/%m/%d')"/></span>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">الجنسية : </span>
                                         <t t-if="o.country_id =='egyptian'" >
                                             <span>مصرى</span>
@@ -111,45 +111,37 @@
                                             <span>غير مصرى</span>
                                         </t>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">المهنة : </span>
                                         <span t-esc="o.job.ar_job_id" />
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مكان الإقامة : </span>
                                         <span t-esc="o.city" />
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
-                                        <span t-field="o.currency_id" />
-                                        <span style="color: #073e89;">: العملة</span>
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+<!--                                        <span t-field="o.currency_id" />-->
+                                        <span style="color: #073e89;">العملة : حنيه مصرى</span>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مدة التأمين : </span>
                                         <span><t t-esc="o.years*12"/> شهرا </span>
 
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
                                         <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
-                                    <div  style="width: 33.33% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
+                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
                                         <span><t t-esc="o.expiry_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
                                         <p style="font-size: 13px;">تم إصدار هذه الوثيقة بناء علي طلب المتعاقد/المؤمن عليه</p>
 
-                                        <p style="font-size: 13px; margin-top:-10px !important;">بعد سداد قسط التأمين الوارد في هذه الوثيقة ، فان شركة أروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تضمن دفع التعويضات الخاصة بالشخص المؤمن عليه أو المستفيد طبقا للشروط والاستثناءات المرفقة وفقا لمبالغ التأمين المذكوره ادناه</p>
+                                        <p style="font-size: 13px; margin-top:-10px !important;">بعد سداد قسط التأمين الوارد في هذه الوثيقة ، فان شركة أروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تضمن دفع التعويضات الخاصة بالشخص المؤمن عليه أو المستفيد طبقا للمواصفات والمزايا</p>
                                     </div>
-                                    <div  style="width: 100% !important; float:right !important; margin-top:10px !important;">
-                                        <table class="table table-hover">
-                                            <tr>
-                                                <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
-                                                <td style="border: none !important; justify-content: left !important; text-align: left !important; float: left !important;"><span> جم </span><t t-esc="o.total"/></td>
 
-                                            </tr>
-                                        </table>
-                                    </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
 <!--                                        <p style="font-size: 13px; margin-top:-10px !important;">رسم الإشراف والرقابة + واحد فى الألف اعتماد وثيقة + اثنين في الألف مقابل صندوق حملة الوثائق</p>-->
                                         <p style="font-size: 13px; margin-top:-10px !important;"><span style="border-bottom: 1px solid;">المستفيد (ين): </span> المستفيد في حالة الوفاة الناجمة عن حادث : <t t-if="o.eligible !=False" ><span>الورثة الشرعيون</span></t> </p>
@@ -190,26 +182,26 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                     <td style="border: none !important;">100% من مبلغ التأمين</td>
-                                                    <td style="border: none !important;"><t t-esc="o.sum_insured"/></td>
+                                                     <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                    <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">الوفاة الناتجة عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;">100% من مبلغ التأمين</td>
-                                                    <td style="border: none !important;"><t t-esc="o.sum_insured"/></td>
+                                                    <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                    <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الكلي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;">100% من مبلغ التأمين</td>
-                                                    <td style="border: none !important;"><t t-esc="o.sum_insured"/></td>
+                                                    <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                    <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الجزئي الدائم الناتج عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;">  </td>
-                                                    <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(15/100))"/></td>
+                                                    <td style="border: none !important;">  من مبلغ التأمين 10% </td>
+                                                    <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
 
@@ -220,11 +212,23 @@
                                     <div style="width: 100% !important; float:right !important;">
                                         <p style="font-size: 13px; ">- إستثناءات</p>
                                         <p style="font-size: 13px; margin-top:-10px !important;">- يخضع هذا التأمين لشروط استثناءات العقوبة الدولية</p>
-                                        <p style="font-size: 13px; margin-top:-10px !important;">- ملاحظة خاصة</p>
 
                                     </div>
+                                    <div  style="width: 100% !important; float:right !important; margin-top:10px !important;">
+                                        <table class="table table-hover">
+                                            <tr>
+                                                <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
+                                                <td style="border: none !important; justify-content: left !important; text-align: left !important; float: left !important;"><span> جم </span><t t-esc="'{0:,.2f}'.format(o.total)"/></td>
+
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div style="width: 100% !important; float:right !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;">- ملاحظة خاصة</p>
+                                        <p style="font-size: 13px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
+                                    </div>
                                     <div style="width: 50% !important; float:left !important;">
-                                        <img style="width:60%;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/1.png"/>
+                                        <img style="width:60%;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/15.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -372,15 +376,15 @@
                                             <t t-esc="ad.ar_condition"/>
                                         </p>
                                     </t>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - تصرف كافة التعويضات الكلية والجزئية للشركه
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - لا يجوز إجراء اي تعديل او اضافة او الغاء على الوثيقة إلا بموافقة كتابية الشركة
-                                    </p>
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - على الشركة موافتنا كتابيا في حالة انتهاء عقد المؤمن له لدى
-                                    </p>
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - تصرف كافة التعويضات الكلية والجزئية للشركه-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - لا يجوز إجراء اي تعديل او اضافة او الغاء على الوثيقة إلا بموافقة كتابية الشركة-->
+<!--                                    </p>-->
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - على الشركة موافتنا كتابيا في حالة انتهاء عقد المؤمن له لدى-->
+<!--                                    </p>-->
                                     <p style="margin-top:5px; text-align:start;">
                                         - التحمل :- يتحمل المؤمن له 100 جم الأولى من قيمة كل حادث للمصاريف الطبية
                                     </p>
@@ -388,19 +392,23 @@
                                         - إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها.
                                     </p>
                                     <p style="text-align:start;">
-                                        - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب التأمين الخاص بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.
+                                        - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.
                                     </p>
                                     <p style="text-align:start;">
                                         تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة
+                                    </p>
+                                    <p style="text-align:start;">
+                                        حررت هذه الوثيقة فى القاهرة بتاريخ <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                     </p>
                                 </div>
 
                             </div>
                         </t>
                         <t  t-if="o.policy_lang == 'ar'">
-                            <div class="footer" style="float:left; width:100px;">
-                                <img  style="width:100% !important;" class="img img-responsive" src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/1.png"/>
-                                <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">اروب لتأمينات الممتلكات والمسئوليات مصر - ش.م.م</span>
+                            <div class="footer" style="float:left; width:100%;">
+                                <img class="img img-responsive" style="width:100px !important; height: 100px !important;"  src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/15.png"/>
+                                <br/>
+                                <span style="font-size: 10px !important; white-space: nowrap !important; overflow: hidden !important;">شركة اروب لتأمينات الممتلكات والمسئوليات مصر - ش.م.م</span>
 
                             </div>
                         </t>
