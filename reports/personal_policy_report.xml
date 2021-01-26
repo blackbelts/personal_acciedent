@@ -171,7 +171,7 @@
                                     </t>
 
                                     <div  style="width: 100% !important; float:right !important; margin-top:-10px !important;">
-                                        <h5 style="color: #073e89; font-weight: 900 !important; border-bottom: 1px solid;">التغطيات</h5>
+                                        <h5 style="font-weight: 900 !important; text-decoration: underline !important;">التغطيات</h5>
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
@@ -212,11 +212,11 @@
                                         </table>
                                     </div>
                                     <div style="width: 100% !important; float:right !important;">
-                                        <p style="font-size: 13px; font-weight: 900 !important; border-bottom: 1px solid;"> إستثناءات -</p>
+                                        <p style="font-size: 13px; font-weight: 900 !important; text-decoration: underline !important;"> إستثناءات -</p>
                                         <p style="font-size: 13px; margin-top:-10px !important;"> يخضع هذا التأمين لشروط استثناءات العقوبة الدولية -</p>
 
                                     </div>
-                                    <div  style="width: 100% !important; float:right !important;">
+                                    <div  style="width: 100% !important; float:rigتht !important;">
                                         <table class="table table-hover">
                                             <tr>
                                                 <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
@@ -225,8 +225,8 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div style="width: 100% !important; float:right !important; margin-top:6px !important;">
-                                        <p style="font-size: 13px; margin-top:-10px !important; font-weight: 900 !important; border-bottom: 1px solid;"> ملاحظة خاصة -</p>
+                                    <div style="width: 100% !important; float:right !important;">
+                                        <p style="font-size: 13px; font-weight: 900 !important; text-decoration: underline !important;"> ملاحظة خاصة -</p>
                                         <p style="font-size: 13px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
                                     </div>
                                     <div style="width: 50% !important; float:left !important;">
@@ -335,7 +335,7 @@
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
-                                <div style="margin-top:10px !important;text-align:start; padding-top:20px !important margin-top: 15px !important;">
+                                <div style="margin-top:20px !important;text-align:start; padding-top:30px !important margin-top: 25px !important;">
 <!--                                    <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>-->
                                     <t t-foreach='o.get_exceptions()' t-as="ex">
                                         <p style="margin-top:5px; text-align:start;">
