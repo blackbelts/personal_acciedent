@@ -59,7 +59,7 @@
                                 <img class="img"  style="width: 100%;" src="https://online.aropeegypt.com.eg:8069/personal_acciedent/static/img/3.jpg"/>
                                 <div class="text-center">
                                     <h5 style="color: #073e89; text-align:center;">وثيقة الحوادث الشخصية</h5>
-                                    <h5 style="color: #073e89; text-align:center;">رقم <t t-esc="o.policy_num"/></h5>
+                                    <h5 style="color: #073e89; text-align:center;"><t t-esc="o.policy_num"/>رقم </h5>
                                     <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزايا الخاصة</h5>
                                 </div>
                                 <div style="border-bottom: 1px solid;">
@@ -80,7 +80,7 @@
                         <t t-if="o.policy_lang == 'ar'">
                             <div class="page" style="unicode-bidi: bidi-override !important; direction: unset !important;text-align:right !important;">                            
 
-                                <div  style="padding-left: 25px !important; padding-right: 25px !important; padding-top:13px; margin-top: 23px !important;">
+                                <div  style="padding-left: 25px !important; padding-right: 25px !important; padding-top:20px; margin-top: 40px !important;">
                                     <div  style="width: 100% !important; padding-left:10px; margin-top:18px !important;">
                                         <span><t t-esc="o.policy_num"/></span>
                                         <span style="padding-left:5px; color: #073e89;">: رقم الوثيقة</span>
@@ -94,15 +94,15 @@
                                         <span style="padding-left:5px; color: #073e89;">العنوان :</span>
                                         <span><t t-esc="o.address"/></span>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">إثبات الشخصية : </span>
                                         <span><t t-esc="o.national_id"/></span>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ الميلاد : </span>
                                         <span><t t-esc="o.DOB.strftime('%Y/%m/%d')"/></span>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">الجنسية : </span>
                                         <t t-if="o.country_id =='egyptian'" >
                                             <span>مصرى</span>
@@ -111,28 +111,28 @@
                                             <span>غير مصرى</span>
                                         </t>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">المهنة : </span>
                                         <span t-esc="o.job.ar_job_id" />
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مكان الإقامة : </span>
                                         <span t-esc="o.city" />
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
 <!--                                        <span t-field="o.currency_id" />-->
                                         <span style="color: #073e89;">العملة : حنيه مصرى</span>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مدة التأمين : </span>
                                         <span><t t-esc="o.years*12"/> شهرا </span>
 
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
                                         <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
-                                    <div  style="width: 32.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
+                                    <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
                                         <span><t t-esc="o.expiry_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
@@ -182,13 +182,13 @@
                                             </thead>
                                             <tbody>
                                                 <tr>
-                                                     <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                     <td style="border: none !important;">100 من مبلغ التأمين %</td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">الوفاة الناتجة عن حادث</td>
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"> من مبلغ التأمين 100%</td>
+                                                    <td style="border: none !important;">100 من مبلغ التأمين %</td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">العجز الكلي الدائم الناتج عن حادث</td>
 
@@ -210,11 +210,11 @@
                                         </table>
                                     </div>
                                     <div style="width: 100% !important; float:right !important;">
-                                        <p style="font-size: 13px; ">- إستثناءات</p>
-                                        <p style="font-size: 13px; margin-top:-10px !important;">- يخضع هذا التأمين لشروط استثناءات العقوبة الدولية</p>
+                                        <p style="font-size: 13px; "> إستثناءات -</p>
+                                        <p style="font-size: 13px; margin-top:-10px !important;"> يخضع هذا التأمين لشروط استثناءات العقوبة الدولية -</p>
 
                                     </div>
-                                    <div  style="width: 100% !important; float:right !important; margin-top:10px !important;">
+                                    <div  style="width: 100% !important; float:right !important; margin-top:3px !important;">
                                         <table class="table table-hover">
                                             <tr>
                                                 <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
@@ -223,8 +223,8 @@
                                             </tr>
                                         </table>
                                     </div>
-                                    <div style="width: 100% !important; float:right !important;">
-                                        <p style="font-size: 13px; margin-top:-10px !important;">- ملاحظة خاصة</p>
+                                    <div style="width: 100% !important; float:right !important; margin-top:3px !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;"> ملاحظة خاصة -</p>
                                         <p style="font-size: 13px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
                                     </div>
                                     <div style="width: 50% !important; float:left !important;">
@@ -333,7 +333,7 @@
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
                                 <div style="page-break-after: always !important;"/>
-                                <div style="margin-top:3px !important;text-align:start; padding-top:5px !important margin-top: 4px !important;">
+                                <div style="margin-top:3px !important;text-align:start; padding-top:15px !important margin-top: 15px !important;">
                                     <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>
                                     <t t-foreach='o.get_exceptions()' t-as="ex">
                                         <p style="margin-top:5px; text-align:start;">
