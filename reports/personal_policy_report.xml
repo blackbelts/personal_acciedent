@@ -175,7 +175,7 @@
                                         <table class="table table-hover">
                                             <thead>
                                                 <tr>
-                                                    <th style="border: none !important;padding-right: 150px !important;" scope="col">ملاحظات</th>
+                                                    <th style="border: none !important;" scope="col">ملاحظات</th>
                                                     <th style="border: none !important;" scope="col">مبلغ التأمين / جم للفرد</th>
                                                     <th style="border: none !important;" scope="col">التغطية التأمينية</th>
 
