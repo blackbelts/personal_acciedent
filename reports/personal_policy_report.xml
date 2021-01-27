@@ -192,7 +192,7 @@
                                                 </tr>
                                                 <tr>
 <!--                                                    <td style="border: none !important;"><span style="float:left; margin-left: 220px !important;padding-right: 0px!important;">من مبلغ التأمين</span> <span style="float:right;padding-left: 0px!important;margin-right: 160px !important;">100%</span></td>-->
-                                                    <td style="border: none !important;"><span style="float:left;padding-right: 0px!important;">من مبلغ التأمين</span> <span style="float:right;padding-left: 0px!important;">100%</span></td>
+                                                    <td style="border: none !important;"><span style="margin-right: 30px;">من مبلغ التأمين</span> <span style="">100%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{0:,.2f}'.format(o.sum_insured)"/></td>
                                                     <td style="border: none !important;">الوفاة الناتجة عن حادث</td>
 
