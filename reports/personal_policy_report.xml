@@ -204,7 +204,7 @@
 
                                                 </tr>
                                                 <tr>
-                                                    <td style="border: none !important;"><span style="float:left;padding-right: 0px!important;width: 5%;text-align: start;">من مبلغ التأمين</span> <span style="float:right;padding-left: 0px!important;width: 5%;text-align: start;">10%</span></td>
+                                                    <td style="border: none !important;width: 10%;"><span style="float:left;padding-right: 0px!important;width: 5%;text-align: right;">من مبلغ التأمين</span> <span style="float:right;padding-left: 0px!important;width: 5%;text-align: start;">10%</span></td>
                                                     <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
@@ -218,7 +218,7 @@
                                         <p style="font-size: 13px; margin-top:-10px !important;"> يخضع هذا التأمين لشروط استثناءات العقوبة الدولية -</p>
 
                                     </div>
-                                    <div  style="width: 100% !important; float:rigتht !important;">
+                                    <div  style="width: 100% !important; float:right !important;">
                                         <table class="table table-hover">
                                             <tr>
                                                 <th style="float:right !important; color: #073e89; border: none !important;" scope="col">إجمالي القسط المستحق</th>
