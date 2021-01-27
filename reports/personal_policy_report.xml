@@ -205,7 +205,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td style="border: none !important;"><span style="padding-right: 1px!important;"> من مبلغ التأمين </span> <span style="float:right;padding-left: 0px!important;">10%</span></td>
-                                                    <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.total*(10/100))"/></td>
+                                                    <td style="border: none !important;"><t t-esc="'{:.2f}'.format(o.sum_insured*(10/100))"/></td>
                                                     <td style="border: none !important;">المصاريف الطبية (الناتجة عن حادث)</td>
 
 
