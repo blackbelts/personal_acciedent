@@ -132,7 +132,7 @@
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
-                                        <span> ظهرا <t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
+                                        <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /> ظهرا </span>
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
