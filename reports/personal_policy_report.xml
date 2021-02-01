@@ -122,8 +122,8 @@
                                         <span t-esc="o.city" />
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
-<!--                                        <span t-field="o.currency_id" />-->
-                                        <span>العملة : جنيه مصرى</span>
+                                        <span style="color: #073e89;">العملة</span>
+                                        <span>جنيه مصرى</span>
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">مدة التأمين : </span>
@@ -132,11 +132,11 @@
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;">
                                         <span style="color: #073e89;">تاريخ بدء التأمين : </span>
-                                        <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
+                                        <span> ظهرا <t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                     </div>
                                     <div  style="width: 31.5% !important; float:right !important;  padding-left:10px; margin-top:10px !important;" >
                                         <span style="color: #073e89;">تاريخ انتهاء التأمين : </span>
-                                        <span><t t-esc="o.expiry_date.strftime('%Y/%m/%d')"  /></span>
+                                        <span><t t-esc="o.expiry_date.strftime('%Y/%m/%d')"  /> ظهرا </span>
                                     </div>
                                     <div style="width: 100% !important; float:right !important; margin-top:10px !important;">
                                         <p style="font-size: 13px;">تم إصدار هذه الوثيقة بناء علي طلب المتعاقد/المؤمن عليه</p>
@@ -247,10 +247,10 @@
                                             </p>
                                         </t>
                                         <p style="font-size: 13px; margin-top:-10px !important;">
-                                        - إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها.
+                                        إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها
                                         </p>
                                         <p style="font-size: 13px; margin-top:-10px !important;">
-                                            - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.
+                                            في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة
                                         </p>
                                         <p style="font-size: 13px; margin-top:-10px !important;">
                                             تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة
