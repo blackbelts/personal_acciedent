@@ -150,8 +150,10 @@
         <field name="priority" eval="16"/>
         <field name="arch" type="xml">
             <tree string="Exceptions" editable="bottom">
+                <field name="type"/>
                 <field name="exception"/>
                 <field name="en_exception"/>
+
             </tree>
         </field>
     </record>
@@ -163,8 +165,10 @@
             <form string="Idea form">
                 <sheet>
                     <group>
+                        <field name="type"/>
                         <field name="exception"/>
                         <field name="en_exception"/>
+
                     </group>
                 </sheet>
             </form>

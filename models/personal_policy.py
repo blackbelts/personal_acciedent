@@ -133,9 +133,13 @@ class TravelPolicy(models.Model):
 
     @api.model
     def get_exceptions(self):
-        exceptions = self.env['personal.exceptions'].search([])
+        exceptions = self.env['personal.exceptions'].search([('type', '=', 'exception')])
         return exceptions
 
+    @api.model
+    def get_general_conditions(self):
+        conditions = self.env['personal.exceptions'].search([('type', '=', 'condition')])
+        return conditions
 
     # @api.one
     @api.depends('issue_date')
@@ -289,3 +293,5 @@ class Exceptions(models.Model):
 
     exception = fields.Text('Exception')
     en_exception = fields.Text('En Exception')
+    type = fields.Selection([('exception', 'Exception'), ('condition', 'Condition')],
+                            'Type', required=True, default='exception')
