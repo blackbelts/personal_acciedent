@@ -229,33 +229,33 @@
 
                                     <div style="width: 100% !important; float:right !important;">
                                         <p style="font-size: 12px; font-weight: 900 !important; text-decoration: underline !important;"> ملاحظة خاصة -</p>
-                                        <p style="font-size: 10px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
+                                        <p style="font-size: 13px; margin-top:-10px !important;">إن التغطية الممنوحة بموجب هذه الوثيقة خلال 24 ساعة داخل جمهورية مصر العربية باستثناء شمال سيناء والمناطق الخطرة</p>
 
                                         <t t-foreach='o.get_exceptions()' t-as="ex">
-                                            <p style="font-size: 10px; margin-top:-10px !important;">
+                                            <p style="font-size: 13px; margin-top:-10px !important;">
                                                 <t t-esc="ex.exception"/>
                                             </p>
                                         </t>
                                         <t t-foreach='o.get_additional_conditions()' t-as="ad">
-                                            <p style="font-size: 10px; margin-top:-10px !important;">
+                                            <p style="font-size: 13px; margin-top:-10px !important;">
                                                 <t t-esc="ad.ar_condition"/>
                                             </p>
                                         </t>
                                         <t t-foreach='o.get_general_conditions()' t-as="gc">
-                                            <p style="font-size: 10px; margin-top:-10px !important;">
+                                            <p style="font-size: 13px; margin-top:-10px !important;">
                                                 <t t-esc="gc.exception"/>
                                             </p>
                                         </t>
-                                        <p style="font-size: 10px; margin-top:-10px !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;">
                                         - إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها.
                                         </p>
-                                        <p style="font-size: 10px; margin-top:-10px !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;">
                                             - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.
                                         </p>
-                                        <p style="font-size: 10px; margin-top:-10px !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;">
                                             تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة
                                         </p>
-                                        <p style="font-size: 10px; margin-top:-10px !important;">
+                                        <p style="font-size: 13px; margin-top:-10px !important;">
                                             حررت هذه الوثيقة فى القاهرة بتاريخ <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
                                         </p>
                                     </div>
@@ -362,18 +362,18 @@
                                 </div>
                             </div>
                         </t>
-                        <t  t-if="o.policy_lang == 'ar'">
-                            <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">
-                                <div style="page-break-after: always !important;"/>
-                                <div style="margin-top:20px !important;text-align:start; padding-top:30px !important; margin-top: 25px !important;">
+<!--                        <t  t-if="o.policy_lang == 'ar'">-->
+<!--                            <div class="page" style=" page-break-after: always !important; direction: rtl !important; font-size:15px !important;">-->
+<!--                                <div style="page-break-after: always !important;"/>-->
+<!--                                <div style="margin-top:20px !important;text-align:start; padding-top:30px !important; margin-top: 25px !important;">-->
 <!--                                    <h5 style="color: #073e89; text-align:center;">جدول المواصفات والمزاية الخاصة</h5>-->
-                                    <div style="margin-top:10px !important; padding-top:10px !important;">
-                                        <t t-foreach='o.get_exceptions()' t-as="ex">
-                                            <p style="margin-top:5px; text-align:start;">
-                                                <t t-esc="ex.exception"/>
-                                            </p>
-                                        </t>
-                                    </div>
+<!--                                    <div style="margin-top:10px !important; padding-top:10px !important;">-->
+<!--                                        <t t-foreach='o.get_exceptions()' t-as="ex">-->
+<!--                                            <p style="margin-top:5px; text-align:start;">-->
+<!--                                                <t t-esc="ex.exception"/>-->
+<!--                                            </p>-->
+<!--                                        </t>-->
+<!--                                    </div>-->
 <!--                                    <p style="margin-top:5px; text-align:start;">-->
 <!--                                        - يستثنى من هذا التأمين الخسائر أو الأضرار التى نشأت أو تأثرت أو لها علاقة أو تسبب بصفة مباشرة أو غير مباشرة عن قرب أو بعد سواء من حيث مصدرها أو من حيث مداها عن حرب أو غزو أو أى عمل من عدو أجنبى أو عدوان أو عمليات حرب ( سواء أعلنت الحرب أم لا ) وتمرد أو عصيان أو الإعتصام أو المصادرة أو الأعمال العدائية أو فتنة و ثورة أو تآمر أو قوة عسكرية أو سلطة غاصبة .-->
 <!--                                    </p>-->
@@ -405,11 +405,11 @@
 <!--                                    <p style="margin-top:5px; text-align:start;">-->
 <!--                                        - يستثنى الأوبئة و الأمراض من أي نوع كانت وكذلك الناشئة عن ضربة شمس أو التجمد من الصقيع أو كل ما يحدث نتيجة تغيرات الطقس .-->
 <!--                                    </p>-->
-                                    <t t-foreach='o.get_additional_conditions()' t-as="ad">
-                                        <p style="margin-top:5px; text-align:start;">
-                                            <t t-esc="ad.ar_condition"/>
-                                        </p>
-                                    </t>
+<!--                                    <t t-foreach='o.get_additional_conditions()' t-as="ad">-->
+<!--                                        <p style="margin-top:5px; text-align:start;">-->
+<!--                                            <t t-esc="ad.ar_condition"/>-->
+<!--                                        </p>-->
+<!--                                    </t>-->
 <!--                                    <p style="margin-top:5px; text-align:start;">-->
 <!--                                        - تصرف كافة التعويضات الكلية والجزئية للشركه-->
 <!--                                    </p>-->
@@ -419,28 +419,28 @@
 <!--                                    <p style="margin-top:5px; text-align:start;">-->
 <!--                                        - على الشركة موافتنا كتابيا في حالة انتهاء عقد المؤمن له لدى-->
 <!--                                    </p>-->
-                                    <t t-foreach='o.get_general_conditions()' t-as="gc">
-                                        <p style="margin-top:5px; text-align:start;">
-                                            <t t-esc="gc.exception"/>
-                                        </p>
-                                    </t>
+<!--                                    <t t-foreach='o.get_general_conditions()' t-as="gc">-->
+<!--                                        <p style="margin-top:5px; text-align:start;">-->
+<!--                                            <t t-esc="gc.exception"/>-->
+<!--                                        </p>-->
+<!--                                    </t>-->
 
-                                    <p style="margin-top:5px; text-align:start;">
-                                        - إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها.
-                                    </p>
-                                    <p style="text-align:start;">
-                                        - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.
-                                    </p>
-                                    <p style="text-align:start;">
-                                        تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة
-                                    </p>
-                                    <p style="text-align:start;">
-                                        حررت هذه الوثيقة فى القاهرة بتاريخ <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>
-                                    </p>
-                                </div>
+<!--                                    <p style="margin-top:5px; text-align:start;">-->
+<!--                                        - إن اية إضافة أو تعديل أو إلغاء لهذه الوثيقة لا تعتبر نافذه ما لم تحصل على توقيع وختم شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م بشرط تنفيذ المتعاقد و/أو المؤمن عليه التزاماته التعاقدية المحددة بالشروط العامة للوثيقة وجدول المواصفات، فإن شركة اروب لتأمينات الممتلكات والمسؤوليات - مصر ش.م.م تتعهد بتنفيذ جميع التزامتها التعاقدية المدرجة فى هذه الوثيقة وملحقاتها.-->
+<!--                                    </p>-->
+<!--                                    <p style="text-align:start;">-->
+<!--                                        - في حالة وجود أى بيان خاطئ أو وجود أية معلومات غير صحيحة في طلب البيانات الخاصة بالمؤمن عليه ، عندها تصبح هذه الوثيقة ملغاه حكما وتصبح الأقساط المسددة حقا مكتسبا للشركة.-->
+<!--                                    </p>-->
+<!--                                    <p style="text-align:start;">-->
+<!--                                        تعتبر الشروط العامة المرفقة رقم <t t-esc="o.policy_num"/> و أية ملاحق أخرى إن وجدت جزء لا يتجزأ من هذه الوثيقة-->
+<!--                                    </p>-->
+<!--                                    <p style="text-align:start;">-->
+<!--                                        حررت هذه الوثيقة فى القاهرة بتاريخ <span><t t-esc="o.issue_date.strftime('%Y/%m/%d')"  /></span>-->
+<!--                                    </p>-->
+<!--                                </div>-->
 
-                            </div>
-                        </t>
+<!--                            </div>-->
+<!--                        </t>-->
                         <t  t-if="o.policy_lang == 'ar'">
                             <div class="footer" style="float:left; width:100%;">
                                 <img class="img img-responsive" style="width:100px !important; height: 100px !important;"  src="https://online.aropeegypt.com.eg:8069/smart_travel_agency/static/src/images/15.png"/>
